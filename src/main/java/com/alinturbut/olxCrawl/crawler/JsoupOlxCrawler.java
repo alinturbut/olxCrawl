@@ -17,14 +17,14 @@ public class JsoupOlxCrawler {
     @Autowired
     private NotificationService notificationService;
 
-    private final String AUDI_A5_URL = "http://olx.ro/auto-masini-moto-ambarcatiuni/autoturisme/q-audi-a5/";
+    private final String CRAWL_URL = "http://olx.ro/auto-masini-moto-ambarcatiuni/autoturisme/q-audi-a5/";
 
     @Transactional
     public String crawlOlx() {
         String crawlResults = "";
 
         try {
-            Document doc = Jsoup.connect(AUDI_A5_URL).get();
+            Document doc = Jsoup.connect(CRAWL_URL).get();
             crawlResults = doc.select(".hasPromoted p").html();
             String firstResults = doc.select("#offers_table tr td.offer:first-child").html();
 
