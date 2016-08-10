@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/olxCrawl.iml" filepath="$PROJECT_DIR$/.idea/modules/olxCrawl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/olxCrawl.iml" filepath="$PROJECT_DIR$/olxCrawl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/olxCrawl_main.iml" filepath="$PROJECT_DIR$/.idea/modules/olxCrawl_main.iml" group="olxCrawl" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/olxCrawl_test.iml" filepath="$PROJECT_DIR$/.idea/modules/olxCrawl_test.iml" group="olxCrawl" />
+    </modules>
+  </component>
+</project>
