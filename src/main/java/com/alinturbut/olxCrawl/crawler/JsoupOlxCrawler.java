@@ -5,12 +5,16 @@ import com.alinturbut.olxCrawl.repository.SiteStatusRepository;
 import com.alinturbut.olxCrawl.util.NotificationService;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class JsoupOlxCrawler {
+    private Logger log = LoggerFactory.getLogger(JsoupOlxCrawler.class);
+
     @Autowired
     private SiteStatusRepository siteStatusRepo;
 
@@ -41,8 +45,8 @@ public class JsoupOlxCrawler {
                 oldCrawlUrl = one.getLastPostUrl();
             }
 
-            System.out.println("Results now: " + newResults);
-            System.out.println("Results then: " + oldResults);
+            log.debug("Results now: " + newResults);
+            log.debug("Results then: " + oldResults);
 
             if(newResults != oldResults || !oldCrawlUrl.equals(lastCrawlUrl)) {
                 SiteStatus siteStatus = new SiteStatus();
@@ -54,7 +58,7 @@ public class JsoupOlxCrawler {
                 notificationService.send(lastCrawlUrl);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            log.debug(e.getMessage());
         }
 
         return crawlResults;
