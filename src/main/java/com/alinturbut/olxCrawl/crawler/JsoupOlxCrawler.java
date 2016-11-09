@@ -21,7 +21,7 @@ public class JsoupOlxCrawler {
     @Autowired
     private NotificationService notificationService;
 
-    private final String CRAWL_URL = "http://olx.ro/auto-masini-moto-ambarcatiuni/autoturisme/q-audi-a5/";
+    private final String CRAWL_URL = "http://olx.ro/oferte/q-smartphone/";
 
     @Transactional
     public String crawlOlx() {

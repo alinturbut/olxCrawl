@@ -54,6 +54,7 @@ public class NotificationService {
             log.error("No properties file found!");
         }
 
+        log.debug(properties.getProperty("spring.mail.username"));
         return properties.getProperty("spring.mail.username");
     }
 }
