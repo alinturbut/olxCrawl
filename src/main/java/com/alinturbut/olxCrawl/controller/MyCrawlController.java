@@ -1,5 +1,6 @@
 package com.alinturbut.olxCrawl.controller;
 
+import com.alinturbut.olxCrawl.config.UrlsProperties;
 import com.alinturbut.olxCrawl.crawler.JsoupOlxCrawler;
 import com.alinturbut.olxCrawl.crawler.OlxCrawler;
 import edu.uci.ics.crawler4j.crawler.CrawlConfig;

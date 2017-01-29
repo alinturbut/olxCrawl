@@ -25,7 +25,7 @@ public class NotificationService {
     @Autowired
     private JavaMailSender javaMailSender;
 
-    public void send(String href) {
+    public void send(String href, String searchUrl) {
         MimeMessage mail = javaMailSender.createMimeMessage();
         try {
             MimeMessageHelper helper = new MimeMessageHelper(mail, true);
@@ -34,7 +34,7 @@ public class NotificationService {
             helper.setReplyTo(author);
             helper.setFrom(author);
             helper.setSubject("Your search on OLX now has other results");
-            helper.setText("Latest added item: " + href);
+            helper.setText("Latest added item: " + href + " for search url: " + searchUrl);
         } catch (MessagingException e) {
             log.error(e.toString());
         } catch (IOException e) {

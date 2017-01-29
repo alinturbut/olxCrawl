@@ -15,6 +15,9 @@ public class SiteStatus {
     @Column(name = "last_post_url")
     private String lastPostUrl;
 
+    @Column(name = "related_post_url")
+    private String relatedPostUrl;
+
     public String getLastPostUrl() {
         return lastPostUrl;
     }
@@ -39,4 +42,11 @@ public class SiteStatus {
         this.id = id;
     }
 
+    public String getRelatedPostUrl() {
+        return relatedPostUrl;
+    }
+
+    public void setRelatedPostUrl(String relatedPostUrl) {
+        this.relatedPostUrl = relatedPostUrl;
+    }
 }

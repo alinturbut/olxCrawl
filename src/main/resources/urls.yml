@@ -1,3 +1,5 @@
 olx:
+  frequency: 60000
   urls:
-    -
+    - http://olx.ro/oferte/q-smartphone/
+    - http://olx.ro/oferte/q-case/
