@@ -8,6 +8,9 @@ import edu.uci.ics.crawler4j.url.WebURL;
 import java.util.Set;
 import java.util.regex.Pattern;
 
+/**
+ * Just an experiment of deep crawling a website. This class is not used for our purposes.
+ */
 public class OlxCrawler extends WebCrawler {
     private final static Pattern FILTERS = Pattern.compile(".*(\\.(css|js|gif|jpg"
             + "|png|mp3|mp3|zip|gz))$");
